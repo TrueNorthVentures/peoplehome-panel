@@ -1,0 +1,150 @@
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='theme-color' content='#4DA5F4')
+    meta(name='csrf-token', content=_csrf)
+    title #{title} - Talent Home
+    // Bootstrap CSS CDN
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js')
+    script(src="assets/angular.min.js")
+    script(src="assets/angular-ui-router.min.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js')
+    script(src='../chirpApp.js')
+    script(src='../chirp.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='stylesheets/style.css')
+    // Our Custom CSS
+    link(rel='stylesheet', href='./assets/css/style.css')
+    script(src='https://www.w3schools.com/appml/2.0.3/appml.js')
+    link(href='assets/css/bootstrap-imageupload.css', rel='stylesheet')
+    link(rel='stylesheet', href='./assets/css/circle.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js')
+    script.
+      $(window).load(function() {
+        
+        $(".se-pre-con").fadeOut("slow");;
+      });
+    style.
+      .no-js#loader { 
+         display: none;  
+         }
+      .js#loader { 
+         display: block; position: absolute; left: 100px; top: 0; 
+         }
+      .se-pre-con {
+         position: fixed;
+         left: 0px;
+         top: 0px;
+         width: 100%;
+         height: 100%;
+         z-index: 9999;
+         background: url(./assets/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+         }
+    
+body
+    .se-pre-con
+    .wrapper
+      // Sidebar Holder
+      nav#sidebar
+        .sidebar-header
+          h3 Talent Home
+          strong
+            span
+              a(href='#')
+                img(src='./assets/images/home.png', style='margin-left: -12px', height='65', width='65')
+        ul.nav.sidebar_menu.side-menu
+          li
+            a(data-toggle='pill', href='#menu4') 
+              span
+                img(src='./assets/images/users.png', height='45', width='45')
+              |  Name
+          li
+            a(data-toggle='pill', href='#menu1')
+              span
+                img(src='./assets/images/network.png', height='45', width='45')
+              |  Name
+          li
+            a(data-toggle='pill', href='#menu2')
+              span
+                img(src='./assets/images/settings.png', height='45', width='45')
+              |  Name
+          li
+            a(data-toggle='pill', href='#menu3')
+              span
+                img(src='./assets/images/question.png', height='45', width='45')
+              |  Name
+      // Page Content Holder
+      #content
+        .row
+          .col-md-12(style='width: 140%')
+            nav.Header.card(style='margin-top: -20px')
+              .container-fluid
+                .navbar-header
+                  button#sidebarCollapse.btn.btn-info.navbar-btn(type='button')
+                    i.glyphicon.glyphicon-align-left
+                #bs-example-navbar-collapse-1
+                  ul.nav.navbar-nav
+                    li(class=(title === 'Home') ?    'active' : undefined)
+                      a(href='/') Home
+                    li(class=(title === 'API Examples') ? 'active' : undefined)
+                      a(href='/api') API Examples
+                    li(class=(title === 'Contact') ? 'active' : undefined)
+                      a(href='/contact') Contact
+                    li
+                      a(href='/status') Status
+                    li
+                      a(href='/emails') Add Email? 
+                    li
+                  ul.nav.navbar-nav.navbar-right
+                    if !user
+                      li(class=(title === 'Login') ?    'active' : undefined)
+                       a(href='/login') Login
+                      li(class=(title === 'Create    Account') ? 'active' : undefined)
+                       a(href='/signup') Create Account
+                    else
+                     .row
+                      .col-md-7.span(style='margin-top:20px')= user.profile.name || user.email || user.id
+                      .col-md-5.li.dropdown(class=(title ===    'Account Management') ? 'active' :   undefined)
+                       a.dropdown-toggle(href='#', data-toggle='dropdown')
+                        if user.profile.picture
+                         img.user-profile.card(src=user.profile.picture, height='60')
+                        else
+                         img.user-profile.card(src=user.gravatar(60), height='60')
+                       ul.dropdown-menu
+                        li 
+                         a(data-toggle='pill', href='#menu3') My Account
+                        li.divider
+                        li
+                         a(href='/logout') Logout
+
+        .row
+          .col-md-12.tab-content(style='width: 135%; margin-top: -10px')
+           #menu4.tab-pane.fade
+            div(ng-app='chirpApp') 
+             div(ui-view)
+    
+           #menu1.tab-pane.fade
+            div(ng-app='chirp') 
+             div(ui-view)
+           #menu2.tab-pane.fade(appml-include-html='Talent.ejs')
+           #menu3.tab-pane.fade(appml-include-html='Talent.ejs')
+           
+          .col-md-offset-2.col-md-8
+           
+    script(src='https://code.jquery.com/jquery-1.12.4.min.js', integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    // jQuery CDN
+    script(src='https://code.jquery.com/jquery-1.12.0.min.js')
+    // Bootstrap Js CDN
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='assets/js/bootstrap-imageupload.js')
+    script(src='./assets/js/javascript.js')
+    script(src='/js/lib/jquery-3.1.1.min.js')
+    script(src='/js/lib/bootstrap.min.js')
+    script(src='/js/main.js')

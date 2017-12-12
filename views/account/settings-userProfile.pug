@@ -1,0 +1,143 @@
+doctype html
+html(lang='en')
+  head
+    title bootstrap-imageupload
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(href='assets/css/bootstrap-imageupload.css', rel='stylesheet')
+    style.
+      .form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 1px;
+      }
+      .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      img {
+      border-radius: 5px 5px 0 0;
+      }
+      .container {
+      padding: 2px 16px;
+      }
+      .page-header{
+      text-align: center;
+      background-color: #3434AF;
+      color: #fff;
+      }
+      .page-header p{
+      vertical-align: middle;
+      display: inline-block;
+      }
+      .switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 17px;
+      }
+      .switch input {display:none;}
+      .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+      .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+      input:checked + .slider {
+      background-color: #3434AF;
+      }
+      input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+      }
+      input:checked + .slider:before {
+      -webkit-transform: translateX(13px);
+      -ms-transform: translateX(13px);
+      transform: translateX(13px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+      border-radius: 34px;
+      }
+      .slider.round:before {
+      border-radius: 50%;
+      }
+  body
+    .row
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 User Profile
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/account/settings-userProfile', method='POST')
+              input(type='hidden', name='_csrf', value=_csrf)
+              .form-group
+                input#text.form-corner.card(type='text', placeholder='Full name', name='text' value=user.profile.name)
+              .form-group
+                input#text.form-corner.card(type='text', placeholder='Position', name='text' value=value=user.profile.contactNumber)
+              .form-group
+                input#email.form-corner.card(type='email', placeholder='Email' name='email', value=user.email)
+              .form-group
+                input#number.form-corner.card(type='number', placeholder='Contact Number', name='number')
+              .form-group
+                p Receive Updates
+                label.switch
+                  input(type='checkbox', checked='')
+                  span.slider.round
+              .form-group
+                .row
+                  .col-md-4
+                  .col-md-4
+                    button(type='submit')
+                      h5(style='color: #fff') UPDATE
+                  .col-md-4
+          .col-md-1
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 Password
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/account/profile', method='POST')
+              .form-group
+                input#CurrentPassword.form-corner.card(type='password', name='CurrentPassword', placeholder='Current Password')
+              .form-group
+                input#ChangePassword.form-corner.card(type='password', name='ChangePassword', placeholder='Change Password')
+              .form-group
+                input#ConfirmPassword.form-corner.card(type='password', name='ConfirmPassword', placeholder='Comfirm Password')
+              .form-group
+                .row
+                  .col-md-4
+                  .col-md-4
+                    button(type='button')
+                      h5(style='color: #fff') UPDATE
+                  .col-md-4
+          .col-md-1
+    .container
+      // bootstrap-imageupload.
+      // bootstrap-imageupload method buttons.
+    script(src='https://code.jquery.com/jquery-1.12.4.min.js', integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')

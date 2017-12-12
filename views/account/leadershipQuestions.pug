@@ -1,0 +1,184 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    style.
+      .form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 1px;
+      }
+      button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      }
+      .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      img {
+      border-radius: 5px 5px 0 0;
+      }
+      .container {
+      padding: 2px 16px;
+      }
+      .page-header{
+      text-align: center;
+      background-color: #3434AF;
+      color: #fff;
+      }
+      .page-header p{
+      vertical-align: middle;
+      display: inline-block;
+      }
+  body
+    .row
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 LEADERSHIP QUESTIONS
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/account/leadershipQuestions', method='POST')
+              .form-group
+                p What is the purpose of your organization?
+                input#organizationPurpose.form-corner.card(type='text', name='organizationPurpose' value=user.organization.organizationPurpose)
+              .form-group
+                p How is the work your organization does important?
+                input#strategicApproach.form-corner.card(type='text', name='strategicApproach' value=user.organization.organizationDriven.strategicApproach)
+              .form-group
+                p Select values fundamental to your organization?
+                .row
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+              .form-group
+                a(href='#')
+                  i.fa.fa-plus.fa-fw
+                | Add more
+              .form-group
+                p How is your company driven?
+                input(type='range', min='10', max='1000', step='10')
+                .row
+                  .col-md-5
+                    p Through Strategic Approach
+                  .col-md-2
+                  .col-md-5
+                    p Processes by result
+              .form-group
+                p What personal traits do you look for in an ideal team member?
+                .row
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+                  .col-md-4
+                    select.form-select.card(name='cars')
+                      option(value='', disabled='', selected='') Select Value
+                      option(value='saab') Saab
+                      option(value='fiat') Fiat
+                      option(value='audi') Audi
+              .form-group
+                a(href='#')
+                  i.fa.fa-plus.fa-fw
+                | Add more
+              .form-group
+                p What happens when someone does something well at the company?
+                input(type='range', min='10', max='1000', step='10')
+                .row
+                  .col-md-5
+                    p He/She is simply expected to do well
+                  .col-md-2
+                  .col-md-5
+                    p He/She gets recognition they deserve
+              .form-group
+                p How are issues handled in your organization?
+                input(type='range', min='10', max='1000', step='10')
+                .row
+                  .col-md-5
+                    p Not talking about it
+                  .col-md-2
+                  .col-md-5
+                    p Providing feedback directly to the person
+              .form-group
+                p How are projects handled?
+                input(type='range', min='10', max='1000', step='10')
+                .row
+                  .col-md-5
+                    p Management take responsibilities
+                  .col-md-2
+                  .col-md-5
+                    p Everyone takes own responsibilities 
+              .form-group
+                p How much autonomy do people have in performing?
+                input(type='range', min='10', max='1000', step='10')
+                .row
+                  .col-md-5
+                    p Management tell employees what to do
+                  .col-md-2
+                  .col-md-5
+                    p Employees choose how and when to work
+              .form-group
+                .row
+                  .col-md-4
+                  .col-md-4
+                    button(type='submit')
+                      h5(style='color: #fff') Submit
+                  .col-md-4
+          .col-md-1
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 ORGANIZATION
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/action_page.php')
+              .form-group
+                p Enter emails of all person be included in the process
+                input#text.form-corner.card(type='text', name='text')
+              .form-group
+                .row
+                  .col-md-4
+                  .col-md-4
+                    button(type='button')
+                      h5(style='color: #fff') Add
+                  .col-md-4
+          .col-md-1

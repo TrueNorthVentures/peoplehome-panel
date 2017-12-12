@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    title bootstrap-imageupload
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js')
+    script(src='../chirpApp.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')
+    link(href='assets/css/bootstrap-imageupload.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/circle.css')
+    style.
+      .nav-tabs { border-bottom: 4px solid #DDD; }
+      .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+      .nav-tabs > li > a { border: none; color: #666; }
+      .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+      .nav-tabs > li > a::after { content: ""; background: #000; height: 4px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+      .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+      .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+      .form-corner{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 1px;
+      }
+      .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      img {
+      border-radius: 5px 5px 0 0;
+      }
+      .container {
+      padding: 2px 16px;
+      }
+      .page-header{
+      text-align: center;
+      background-color: #3434AF;
+      color: #fff;
+      }
+      .page-header p{
+      vertical-align: middle;
+      display: inline-block;
+      }
+      div.scroll {
+      background-color: #fff;
+      width: 100%;
+      height: 200px;
+      overflow: scroll;
+      }
+      .Submit {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: #fff;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      }
+  body(style='background-color: #E2E2E2')
+    .row
+      .col-md-4
+      .col-md-4
+        form#signup-form.form-horizontal(method='POST', style='margin-top: 200px')
+          input(type='hidden', name='_csrf')
+          .form-group
+            .col-md-12
+              input#email.form-corner(type='email', name='email', placeholder='Email or username', autofocus='', required='')
+          .form-group
+            .col-md-12
+              input#password.form-corner(type='password', name='password', placeholder='Password', required='')
+          .form-group
+            .col-md-12
+              input#confirmPassword.form-corner(type='password', name='confirmPassword', placeholder='Confirm Password', required='')
+          .form-group
+            .row
+              .col-md-4
+              .col-md-4
+                button.btn.Submit(type='submit')
+                  i.fa.fa-user-plus
+                  |  Get Started
+              .col-md-4
+      .col-md-4

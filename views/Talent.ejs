@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title>bootstrap-imageupload</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="assets/css/bootstrap-imageupload.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/circle.css">
+        <style>
+            
+
+     .nav-tabs { border-bottom: 4px solid #DDD; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+    .nav-tabs > li > a { border: none; color: #666; }
+        .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+        .nav-tabs > li > a::after { content: ""; background: #000; height: 4px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+
+.form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+    .page-header{
+        text-align: center;
+        background-color: #3434AF;
+        color: #fff;
+        
+    }
+    .page-header p{
+        vertical-align: middle;
+    display: inline-block;
+    }
+
+        </style>
+
+    </head>
+
+    <body>
+
+<div class="row card">
+    <div class="page-header card" >
+            <span class=""> <br><h4>LATEST MATCHES</h4></span>
+        </div>
+    
+          <div class="card" style="margin-top: -20px">
+             <ul class="nav  nav-tabs " role="tablist">
+                <li role="presentation" class="active" style="width: 33%" ><a href="#frontEnd" aria-controls="frontEnd" role="tab" data-toggle="tab" style="border-right: 1px solid #B4B4B4"><center>Frontend</center></a></li>
+                <li role="presentation"  style="width: 34%"><a href="#fullStack" aria-controls="fullStack" role="tab" data-toggle="tab" style="border-right: 1px solid #B4B4B4"><center>Full Stack</center></a></li>
+                <li role="presentation"  style="width: 33%"><a href="#graphicDesigner" aria-controls="graphicDesigner" role="tab" data-toggle="tab"><center>Graphic Designer</center></a></li>
+            </ul>
+
+                                    <!-- Tab panes -->
+                <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="frontEnd">    
+   <div class="col-md-6 card">
+    
+        <div class="page-header card" style="background-color: black" >
+            <span class=""> <br><h4>OPTION(A)</h4></span>
+        </div>
+                   <div class="row card">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                 <div class="row">
+                     <div class="col-md-8 userprofile">
+                         <div class="row">
+                             <div class="col-md-3">
+                                 <img src="./assets/images/img.jpg" style="margin-top: -10px" height="60%" width="60%" alt="">
+                             </div>
+                             <div class="col-md-9"  style="border-right: 2px solid #FFDDDD">
+                                 <strong>John Doe</strong><br>San Fransico, California
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-1">
+                        
+                     </div>
+                     <div class="col-md-3"  style="margin-top: -10px">
+                        <h4> <strong >Frontend Engineer</strong></h4>
+                     </div>
+                 </div><br><br>
+                   <div clas="row" >
+                       <div clas="col-md-6">
+                            
+                                <div class="c100 p50 medium">
+                                    <span>50%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                              <div class="row"><div class="col-md-12">Match with Position</div></div>
+                      </div>
+                      <div class="col-md-6" style="margin-top: -100px; margin-left: 220px; ">
+                          <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                         <div class="row"><div class="col-md-12">Amongst top 16%</div></div> 
+                            
+                      </div>
+                   </div>
+                   
+                   <div class=" row" style="margin-top: 30px; border-top: 2px solid #FFDDDD"><br> <br>
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                   <div class=" row">
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+<div class="col-md-6 card">
+  <div class="page-header card" style="background-color: black" >
+      <span class=""> <br><h4>OPTION(B)</h4></span>
+        </div>
+                   <div class="row card">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <div class="row">
+                     <div class="col-md-8 userprofile">
+                         <div class="row">
+                             <div class="col-md-3">
+                                 <img src="./assets/images/img.jpg" style="margin-top: -10px" height="60%" width="60%" alt="">
+                             </div>
+                             <div class="col-md-9"  style="border-right: 2px solid #FFDDDD">
+                                 <strong>John Doe</strong><br>San Fransico, California
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-1">
+                        
+                     </div>
+                     <div class="col-md-3"  style="margin-top: -10px">
+                        <h4> <strong >Frontend Engineer</strong></h4>
+                     </div>
+                 </div><br><br>
+                   <div clas="row" >
+                       <div clas="col-md-6">
+                            
+                                <div class="c100 p50 medium">
+                                    <span>50%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                              <div class="row"><div class="col-md-12">Match with Position</div></div>
+                      </div>
+                      <div class="col-md-6" style="margin-top: -100px; margin-left: 220px; ">
+                          <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                         <div class="row"><div class="col-md-12">Amongst top 16%</div></div> 
+                            
+                      </div>
+                   </div>
+                   
+                   <div class=" row" style="margin-top: 30px; border-top: 2px solid #FFDDDD"><br> <br>
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                   <div class=" row">
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div> 
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+  </div>
+        </div>
+                <div role="tabpanel" class="tab-pane" id="fullStack">  
+   <div class="col-md-6 card">
+    
+        <div class="page-header card" style="background-color: black" >
+            <span class=""> <br><h4>User Profile</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Full name" name="text">
+                     </div>
+                      <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Position" name="text">
+                     </div>  
+                    <div class="form-group">
+                   <input type="email" class="form-corner card" id="email" Placeholder="Email" name="email">
+                     </div>
+                     <div class="form-group">
+                   <input type="number" class="form-corner card" id="number" Placeholder="Contact Number" name="number">
+                     </div>
+                    <div class="form-group">
+                        <p>Receive Updates</p>
+                      <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                      </label>
+                     </div>
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">UPDATE</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>                  
+<div class="col-md-6 card">
+  <div class="page-header card" style="background-color: black" >
+      <span class=""> <br><h4>Password</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="CurrentPassword"  name="CurrentPassword" Placeholder="Current Password">
+                     </div>
+                      <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ChangePassword"  name="ChangePassword" Placeholder="Change Password">
+                     </div>
+                     <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ConfirmPassword"  name="ConfirmPassword" Placeholder="Comfirm Password">
+                     </div>
+                     
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+  </div>
+                    </div>
+<div role="tabpanel" class="tab-pane " id="graphicDesigner">    
+   <div class="col-md-6 card">
+    
+        <div class="page-header card" style="background-color: black" >
+            <span class=""> <br><h4>User Profile</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Full name" name="text">
+                     </div>
+                      <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Position" name="text">
+                     </div>  
+                    <div class="form-group">
+                   <input type="email" class="form-corner card" id="email" Placeholder="Email" name="email">
+                     </div>
+                     <div class="form-group">
+                   <input type="number" class="form-corner card" id="number" Placeholder="Contact Number" name="number">
+                     </div>
+                    <div class="form-group">
+                        <p>Receive Updates</p>
+                      <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                      </label>
+                     </div>
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">UPDATE</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+<div class="col-md-6 card">
+  <div class="page-header card" style="background-color: black" >
+      <span class=""> <br><h4>Password</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="CurrentPassword"  name="CurrentPassword" Placeholder="Current Password">
+                     </div>
+                      <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ChangePassword"  name="ChangePassword" Placeholder="Change Password">
+                     </div>
+                     <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ConfirmPassword"  name="ConfirmPassword" Placeholder="Comfirm Password">
+                     </div>
+                     
+                    
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">UPDATE</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+  </div>
+        </div>
+                </div>
+         </div>
+    
+    
+    
+
+  
+</div>
+            
+<div class="row card">
+    <div class="page-header card" >
+            <span class=""> <br><h4>ACTIVE JOBS</h4></span>
+        </div>
+    <div class="nav card">
+        <div class="form-group">
+     
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position Type</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Expiration</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select></div>
+                            <div class="col-md-2"></div>
+                        </div>
+        </div>
+    </div>
+     <div class="nav form-group" style="margin-top: 10px">
+        <div class="row"><div class="col-md-5"></div><div class="col-md-2 "><button type="button" class=""><h5 style="color: #fff">POST POSITION</h5></button></div><div class="col-md-5"></div></div>
+                        
+    </div>
+    
+   <div class="col-md-6 "  style="margin-top: 10px">
+    
+        
+        <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10 card">
+                    <div class="row">
+                        <div class="col-md-5" style="margin-top: 50px"><h3 style="">DEVELOPMENT</h3>
+                        </div>
+                        <div class="col-md-7" style="border-left: 2px solid #D8D6D6">
+                            <br>
+                            &nbsp<i class="fa fa-user fa-2x" aria-hidden="true">&nbsp &nbsp</i>Full Stack Web Developer<br><br>
+                            <i class="fa fa-calendar fa-2x" aria-hidden="true">&nbsp &nbsp</i>25/8/2017<br><br>
+                            <i class="fa fa-clock-o fa-2x" aria-hidden="true">&nbsp &nbsp</i>4 weeks<br><br>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+       
+        <div class="row"  style="margin-top: 50px">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10 card">
+                    <div class="row">
+                        <div class="col-md-5" style="margin-top: 50px"><h3 style="">DEVELOPMENT</h3>
+                        </div>
+                        <div class="col-md-7" style="border-left: 2px solid #D8D6D6">
+                            <br>
+                            &nbsp<i class="fa fa-user fa-2x" aria-hidden="true">&nbsp &nbsp</i>Full Stack Web Developer<br><br>
+                            <i class="fa fa-calendar fa-2x" aria-hidden="true">&nbsp &nbsp</i>25/8/2017<br><br>
+                            <i class="fa fa-clock-o fa-2x" aria-hidden="true">&nbsp &nbsp</i>4 weeks<br><br>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+   <div class="col-md-6 "  style="margin-top: 10px">
+    
+        
+        <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10 card">
+                    <div class="row">
+                        <div class="col-md-5" style="margin-top: 50px"><h3 style="">DEVELOPMENT</h3>
+                        </div>
+                        <div class="col-md-7" style="border-left: 2px solid #D8D6D6">
+                            <br>
+                            &nbsp<i class="fa fa-user fa-2x" aria-hidden="true">&nbsp &nbsp</i>Full Stack Web Developer<br><br>
+                            <i class="fa fa-calendar fa-2x" aria-hidden="true">&nbsp &nbsp</i>25/8/2017<br><br>
+                            <i class="fa fa-clock-o fa-2x" aria-hidden="true">&nbsp &nbsp</i>4 weeks<br><br>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+       
+        <div class="row"  style="margin-top: 50px">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10 card">
+                    <div class="row">
+                        <div class="col-md-5" style="margin-top: 50px"><h3 style="">DEVELOPMENT</h3>
+                        </div>
+                        <div class="col-md-7" style="border-left: 2px solid #D8D6D6">
+                            <br>
+                            &nbsp<i class="fa fa-user fa-2x" aria-hidden="true">&nbsp &nbsp</i>Full Stack Web Developer<br><br>
+                            <i class="fa fa-calendar fa-2x" aria-hidden="true">&nbsp &nbsp</i>25/8/2017<br><br>
+                            <i class="fa fa-clock-o fa-2x" aria-hidden="true">&nbsp &nbsp</i>4 weeks<br><br>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          </div>
+        <div class="row" >
+            <div class="col-md-6" style="margin-top: 30px">
+                <div class=" card "><i class="fa fa-angle-down fa-3x pull-right" aria-hidden="true"></i></div>
+            </div>
+            <div class="col-md-5"  style="margin-top: 10px;">
+                <div class=" card "><i class="fa fa-plus-circle fa-4x pull-right"  aria-hidden="true"></i></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>     
+           
+<div class="row card">
+    <div class="page-header card" >
+            <span class=""> <br><h4>MATCH HISTORY</h4></span>
+        </div>
+     <div class="card" style="margin-top: -20px">
+            <ul class="nav  nav-tabs " role="tablist">
+                <li role="presentation" class="active" style="width: 50%" ><a href="#hired" aria-controls="hired" role="tab" data-toggle="tab" style="border-right: 1px solid #B4B4B4"><center>HIRED</center></a></li>
+                <li role="presentation"  style="width: 50%"><a href="#rejected" aria-controls="rejected" role="tab" data-toggle="tab" ><center>REJECTED</center></a></li>
+            </ul>
+    </div>
+    <div class="tab-content">
+     <div role="tabpanel" class="tab-pane active" id="hired">  
+             <div class="nav card" style="margin-top: 10px">
+        <div class="form-group">
+     
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position Type</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Expiration</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select></div>
+                            <div class="col-md-2"></div>
+                        </div>
+        </div>
+    </div>
+         <div class="col-md-3"> <i class="fa fa-angle-left fa-5x" style="margin-top: 200px" aria-hidden="true"></i></div>
+   <div class="col-md-6 card"  style="margin-top: 30px">
+    
+        <div class="page-header card" style="background-color: black" >
+            <span class=""> <br><h4>OPTION(A)</h4></span>
+        </div>
+                   <div class="row card">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                 <div class="row">
+                     <div class="col-md-8 userprofile">
+                         <div class="row">
+                             <div class="col-md-3">
+                                 <img src="./assets/images/img.jpg" style="margin-top: -10px" height="60%" width="60%" alt="">
+                             </div>
+                             <div class="col-md-9"  style="border-right: 2px solid #FFDDDD">
+                                 <strong>John Doe</strong><br>San Fransico, California
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-1">
+                        
+                     </div>
+                     <div class="col-md-3"  style="margin-top: -10px">
+                        <h4> <strong >Frontend Engineer</strong></h4>
+                     </div>
+                 </div><br><br>
+                   <div clas="row" >
+                       <div clas="col-md-6">
+                            
+                                <div class="c100 p50 medium">
+                                    <span>50%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                              <div class="row"><div class="col-md-12">Match with Position</div></div>
+                      </div>
+                      <div class="col-md-6" style="margin-top: -100px; margin-left: 220px; ">
+                          <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                         <div class="row"><div class="col-md-12">Amongst top 16%</div></div> 
+                            
+                      </div>
+                   </div>
+                   
+                   <div class=" row" style="margin-top: 30px; border-top: 2px solid #FFDDDD"><br> <br>
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                   <div class=" row">
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+           <div class="col-md-3"> <i class="fa fa-angle-right fa-5x pull-right" style="margin-top: 200px" aria-hidden="true"></i></div>
+        <div class="row" >
+            <div class="col-md-6" style="margin-top: 30px">
+                <div class=" card "><i class="fa fa-angle-down fa-3x pull-right" aria-hidden="true"></i></div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        </div>
+    <div role="tabpanel" class="tab-pane" id="rejected">  
+             <div class="nav card" style="margin-top: 10px">
+        <div class="form-group">
+     
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position Type</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Position</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Expiration</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select></div>
+                            <div class="col-md-2"></div>
+                        </div>
+        </div>
+    </div>
+         <div class="col-md-3"> <i class="fa fa-angle-left fa-5x" style="margin-top: 200px" aria-hidden="true"></i></div>
+   <div class="col-md-6 card"  style="margin-top: 30px">
+    
+        <div class="page-header card" style="background-color: black" >
+            <span class=""> <br><h4>OPTION(B)</h4></span>
+        </div>
+                   <div class="row card">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                 <div class="row">
+                     <div class="col-md-8 userprofile">
+                         <div class="row">
+                             <div class="col-md-3">
+                                 <img src="./assets/images/img.jpg" style="margin-top: -10px" height="60%" width="60%" alt="">
+                             </div>
+                             <div class="col-md-9"  style="border-right: 2px solid #FFDDDD">
+                                 <strong>John Doe</strong><br>San Fransico, California
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-1">
+                        
+                     </div>
+                     <div class="col-md-3"  style="margin-top: -10px">
+                        <h4> <strong >Frontend Engineer</strong></h4>
+                     </div>
+                 </div><br><br>
+                   <div clas="row" >
+                       <div clas="col-md-6">
+                            
+                                <div class="c100 p50 medium">
+                                    <span>50%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                              <div class="row"><div class="col-md-12">Match with Position</div></div>
+                      </div>
+                      <div class="col-md-6" style="margin-top: -100px; margin-left: 220px; ">
+                          <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                         <div class="row"><div class="col-md-12">Amongst top 16%</div></div> 
+                            
+                      </div>
+                   </div>
+                   
+                   <div class=" row" style="margin-top: 30px; border-top: 2px solid #FFDDDD"><br> <br>
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                   <div class=" row">
+                       <div class="col-md-12">
+                         <div class="progress" style="height: 40px;">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+           <div class="col-md-3"> <i class="fa fa-angle-right fa-5x pull-right" style="margin-top: 200px" aria-hidden="true"></i></div>
+        <div class="row" >
+            <div class="col-md-6" style="margin-top: 30px">
+                <div class=" card "><i class="fa fa-angle-down fa-3x pull-right" aria-hidden="true"></i></div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        </div>    
+    </div>
+     </div>
+
+        
+        
+        <div class="container">
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       
+
+    </body>
+
+</html>

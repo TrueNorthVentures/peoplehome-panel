@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+
+.form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 1px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+    .page-header{
+        text-align: center;
+        background-color: #3434AF;
+        color: #fff;
+        
+    }
+    .page-header p{
+        vertical-align: middle;
+    display: inline-block;
+    }
+    
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="col-md-6 card">
+    
+        <div class="page-header card" >
+            <span class=""> <br><h4>LEADERSHIP QUESTIONS</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                        <p>What is the purpose of your organization?</p>
+                   <input type="text" class="form-corner card" id="text"  name="text">
+                     </div>
+                    <div class="form-group">
+                        <p>How is the work your organization does important?</p>
+                   <input type="text" class="form-corner card" id="text"  name="text">
+                     </div>
+                    <div class="form-group">
+                        <p>Select values fundamental to your organization?</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select></div>
+                        </div>
+                     </div>
+                    <div class="form-group">
+                        <a href="#"><i class="fa fa-plus fa-fw"></i> </a>Add more
+                        
+                    </div>
+                    <div class="form-group">
+                    <p>How is your company driven?</p>
+                        <input type="range" min="10" max="1000" step="10" />
+                        <div class="row"><div class="col-md-5"><p>Through Strategic Approach</p></div><div class="col-md-2"></div><div class="col-md-5"><p>Processes by result</p></div></div>
+                    </div>
+                    <div class="form-group">
+                        <p>What personal traits do you look for in an ideal team member?</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select>
+                            </div>
+                            
+                            <div class="col-md-4">
+                    <select name="cars" class="form-select card">
+                       <option value="" disabled selected>Select Value</option>
+                       <option value="saab">Saab</option>
+                       <option value="fiat">Fiat</option>
+                       <option value="audi">Audi</option>
+                    </select></div>
+                        </div>
+                     </div>
+                    <div class="form-group">
+                        <a href="#"><i class="fa fa-plus fa-fw"></i> </a>Add more
+                        
+                    </div>
+                      <div class="form-group">
+                    <p>What happens when someone does something well at the company?</p>
+                        <input type="range" min="10" max="1000" step="10" />
+                        <div class="row"><div class="col-md-5"><p>He/She is simply expected to do well</p></div><div class="col-md-2"></div><div class="col-md-5"><p>He/She gets recognition they deserve</p></div></div>
+                    </div>
+
+                     <div class="form-group">
+                    <p>How are issues handled in your organization?</p>
+                        <input type="range" min="10" max="1000" step="10" />
+                        <div class="row"><div class="col-md-5"><p>Not talking about it</p></div><div class="col-md-2"></div><div class="col-md-5"><p>Providing feedback directly to the person</p></div></div>
+                    </div>
+                     <div class="form-group">
+                    <p>How are projects handled?</p>
+                        <input type="range" min="10" max="1000" step="10" />
+                        <div class="row"><div class="col-md-5"><p>Management take responsibilities</p></div><div class="col-md-2"></div><div class="col-md-5"><p>Everyone takes own responsibilities </p></div></div>
+                    </div>
+                     <div class="form-group">
+                    <p>How much autonomy do people have in performing?</p>
+                        <input type="range" min="10" max="1000" step="10" />
+                        <div class="row"><div class="col-md-5"><p>Management tell employees what to do</p></div><div class="col-md-2"></div><div class="col-md-5"><p>Employees choose how and when to work</p></div></div>
+                    </div>
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">Submit</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+      <div class="col-md-6 card">
+  <div class="page-header card" >
+      <span class=""> <br><h4>ORGANIZATION</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                        <p>Enter emails of all person be included in the process</p>
+                   <input type="text" class="form-corner card" id="text"  name="text">
+                     </div>
+                    
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">Add</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+  </div>
+</div>
+</body>
+</html> 

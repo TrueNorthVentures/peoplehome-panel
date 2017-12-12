@@ -1,0 +1,168 @@
+doctype html
+html(lang='en')
+  head
+    title bootstrap-imageupload
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(href='assets/css/bootstrap-imageupload.css', rel='stylesheet')
+    style.
+      .form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 1px;
+      }
+      .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      img {
+      border-radius: 5px 5px 0 0;
+      }
+      .container {
+      padding: 2px 16px;
+      }
+      .page-header{
+      text-align: center;
+      background-color: #3434AF;
+      color: #fff;
+      }
+      .page-header p{
+      vertical-align: middle;
+      display: inline-block;
+      }
+      .switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 17px;
+      }
+      .switch input {display:none;}
+      .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+      .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      }
+      input:checked + .slider {
+      background-color: #3434AF;
+      }
+      input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+      }
+      input:checked + .slider:before {
+      -webkit-transform: translateX(13px);
+      -ms-transform: translateX(13px);
+      transform: translateX(13px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+      border-radius: 34px;
+      }
+      .slider.round:before {
+      border-radius: 50%;
+      }
+body
+  .row
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 User Profile
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/account/profile', method='POST')
+              input(type='hidden', name='_csrf', value=_csrf)
+              .form-group
+                label.col-md-2.control-label(for='email') Email
+                .col-md-10
+                  input#email.form-corner.card(type='email', name='email', value=user.email)
+              .form-group
+                label.col-md-2.control-label(for='name') Name
+                .col-md-10
+                  input#text.form-corner.card(type='text', name='name', value=user.profile.name)
+              .form-group
+                label.col-md-2.control-label(for='Position') Position
+                .col-md-10
+                  input#position.form-corner.card(type='text', name='position', value=user.profile.position)
+              .form-group
+                label.col-md-2.control-label(for='Contact Number') Contact Number
+                .col-md-10
+                  input#contactNumber.form-corner.card(type='number', name='contactNumber', value=user.profile.contactNumber)
+              .form-group
+                label.col-md-2.control-label(for='location') Location
+                .col-md-10
+                  input#location.form-corner.card(type='text', name='location', value=user.profile.location)
+              .form-group
+                label.col-md-2.control-label(for='website') Website
+                .col-md-10
+                  input#website.form-corner.card(type='text', name='website', value=user.profile.website)
+              .form-group
+                label.col-sm-3.control-label Gravatar
+                .col-sm-4
+                  img(src=user.gravatar(), class='profile', width='100', height='100')
+              br
+              .form-group
+                .row
+                  .col-md-3
+                  .col-md-6
+                    button(type='submit')
+                      h5(style='color: #fff') Update Profile
+                  .col-md-3
+            //form.form-horizontal(action='/account/botCandidate', method='POST')
+             // input(type='hidden', name='_csrf', value=_csrf)
+             // .form-group
+              //  label.col-md-2.control-label(for='email') Email
+              //  .col-md-10
+              //   input#email.form-corner.card(type='text', name='text', value=botuser.basic.first_name)
+             // .form-group
+              //  label.col-md-2.control-label(for='name') Name
+              //  .col-md-10
+               //   input#text.form-corner.card(type='text', name='text', value=botuser.basic.last_name)
+
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 Password
+        .row
+          .col-md-1
+          .col-md-10
+            form.form-horizontal(action='/account/password', method='POST')
+             input(type='hidden', name='_csrf', value=_csrf)
+             .form-group
+               label.col-md-3(for='password') New Password
+               .col-md-9
+                 input#password.form-corner.card(type='password', name='password')
+             .form-group
+               label.col-md-3(for='confirmPassword') Confirm Password
+               .col-md-9
+                 input#confirmPassword.form-corner.card(type='password', name='confirmPassword')
+             br
+             .form-group
+                .row
+                  .col-md-3
+                  .col-md-6
+                    button(type='submit')
+                      h5(style='color: #fff') Change Password
+                  .col-md-3
+ 

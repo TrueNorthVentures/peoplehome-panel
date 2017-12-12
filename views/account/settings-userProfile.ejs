@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <title>bootstrap-imageupload</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="assets/css/bootstrap-imageupload.css" rel="stylesheet">
+
+        <style>
+.imageupload {
+                margin: 20px 0;
+            }
+.form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+    .page-header{
+        text-align: center;
+        background-color: #3434AF;
+        color: #fff;
+        
+    }
+    .page-header p{
+        vertical-align: middle;
+    display: inline-block;
+    }
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #3434AF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}   
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="row">
+<div class="col-md-6 card">
+    
+        <div class="page-header card" >
+            <span class=""> <br><h4>User Profile</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Full name" name="text">
+                     </div>
+                      <div class="form-group">
+                   <input type="text" class="form-corner card" id="text" Placeholder="Position" name="text">
+                     </div>  
+                    <div class="form-group">
+                   <input type="email" class="form-corner card" id="email" Placeholder="Email" name="email">
+                     </div>
+                     <div class="form-group">
+                   <input type="number" class="form-corner card" id="number" Placeholder="Contact Number" name="number">
+                     </div>
+                    <div class="form-group">
+                        <p>Receive Updates</p>
+                      <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                      </label>
+                     </div>
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">UPDATE</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+ 
+  </div>
+          <div class="col-md-6 card">
+  <div class="page-header card" >
+      <span class=""> <br><h4>Password</h4></span>
+        </div>
+                   <div class="row ">
+                       <div class="col-md-1"></div>
+                <div class="col-md-10">
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="CurrentPassword"  name="CurrentPassword" Placeholder="Current Password">
+                     </div>
+                      <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ChangePassword"  name="ChangePassword" Placeholder="Change Password">
+                     </div>
+                     <div class="form-group">
+                       
+                   <input type="password" class="form-corner card" id="ConfirmPassword"  name="ConfirmPassword" Placeholder="Comfirm Password">
+                     </div>
+                     
+                    
+                    <div class="form-group ">
+                        <div class="row"><div class="col-md-4"></div><div class="col-md-4 "><button type="button" class=""><h5 style="color: #fff">UPDATE</h5></button></div><div class="col-md-4"></div></div>
+                        
+                    </div>
+                </form>  
+                </div>
+                    <div class="col-md-1"></div>
+                  </div>
+          
+              
+  </div>
+</div>
+     
+        <div class="container">
+
+           
+
+            <!-- bootstrap-imageupload. -->
+         
+
+            <!-- bootstrap-imageupload method buttons. -->
+          
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="assets/js/bootstrap-imageupload.js"></script>
+
+        <script>
+            var $imageupload = $('.imageupload');
+            $imageupload.imageupload();
+
+           
+           
+           
+        </script>
+
+    </body>
+
+</html>

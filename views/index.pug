@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Chirp
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js')
+    script(src='../chirpApp.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='stylesheets/style.css')
+  body(ng-app='chirpApp')
+    #main.container
+      nav.navbar-fluid.navbar-default.navbar-fixed-top
+        .container
+          a.navbar-brand(href='#')  Chirp! 
+          p.navbar-text  Learn the MEAN stack by building this tiny app
+          p.navbar-right.navbar-text(ng-hide='authenticated')
+            a(href='#/login') Login
+            |  or 
+            a(href='#/signup') Register
+          p.navbar-right.navbar-text(ng-show='authenticated')
+            a(href='#', ng-click='signout()') Logout
+          p.navbar-right.navbar-text(ng-show='authenticated') Signed in as {{current_user}}
+      .col-md-offset-2.col-md-8
+        div(ng-view='')

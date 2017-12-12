@@ -1,0 +1,341 @@
+doctype html
+html(lang='en')
+  head
+    title bootstrap-imageupload
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js')
+    script(src='../chirpApp.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(href='assets/css/bootstrap-imageupload.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/circle.css')
+    style.
+      .nav-tabs { border-bottom: 4px solid #DDD; }
+      .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+      .nav-tabs > li > a { border: none; color: #666; }
+      .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+      .nav-tabs > li > a::after { content: ""; background: #000; height: 4px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+      .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+      .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+      .form-corner{width: auto; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .form-select{width: 100%; height:40px; background-repeat:no-repeat; background-position:10px center; padding-left:10px; border:1px solid #D6DBDF;  }
+      .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 100%;
+      border-radius: 1px;
+      }
+      .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      img {
+      border-radius: 5px 5px 0 0;
+      }
+      .container {
+      padding: 2px 16px;
+      }
+      .page-header{
+      text-align: center;
+      background-color: #3434AF;
+      color: #fff;
+      }
+      .page-header p{
+      vertical-align: middle;
+      display: inline-block;
+      }
+      div.scroll {
+      background-color: #fff;
+      width: 100%;
+      height: 200px;
+      overflow: scroll;
+      }
+  body(ng-app='chirpApp')
+    .row.card
+      .page-header.card
+        span
+          br
+          h4 LATEST MATCHES
+      .col-md-6(style='border-right: 2px solid #FFDDDD')
+        .row
+          .col-md-1
+          .col-md-10
+            br
+            .row
+              .col-md-8.userprofile
+                .row
+                  .col-md-3
+                    img(src='./assets/images/img.jpg', style='margin-top: -10px', height='60%', width='60%', alt='')
+                  .col-md-9(style='border-right: 2px solid #FFDDDD')
+                    strong John Doe
+                    br
+                    | San Fransico, California
+              .col-md-1
+              .col-md-3(style='margin-top: -10px')
+                h4
+                  strong Frontend Engineer
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-3
+                img(src='./assets/images/graduation.png', height='40', width='40')
+              .col-md-9
+                strong Software Engineering
+                br
+                |                            Comsats Institute of Information Technology
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-3
+                img(src='./assets/images/age.png', height='40', width='40')
+              .col-md-9
+                strong 23 Years
+                br
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-3
+                i.fa.fa-trophy.fa-3x(aria-hidden='true')
+                br
+              .col-md-9
+                strong.badge 1
+                br
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-3
+                img(src='./assets/images/manager.png', height='40', width='40')
+              .col-md-9
+                strong.badge 1
+                br
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-3
+                i.fa.fa-trophy.fa-3x(aria-hidden='true')
+                br
+                br
+              .col-md-9
+                strong Intermediate
+                br
+                br
+          .col-md-1
+      .col-md-6
+        .row
+          .col-md-1
+          .col-md-10
+            br
+            div(clas='row')
+              div(clas='col-md-6', style='')
+                .c100.p50.medium
+                  span 50%
+                  .slice
+                    .bar
+                    .fill
+                .row
+                  .col-md-12 Match with Position
+              .col-md-6(style='margin-top: -100px; margin-left: 220px; border-left: 2px solid #FFDDDD')
+                .progress(style='height: 40px', ;='')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                .row
+                  .col-md-12 Amongst top 16%
+            .row(style='margin-top: 30px; ')
+              br
+              br
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+            .row(style='border-bottom: 2px solid #FFDDDD')
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+            .row
+              .col-md-3
+                img(src='./assets/images/manager.png', height='80', width='80', style='margin-top:70px')
+                h2
+                  strong I.S.T.F
+              .col-md-9
+                .row
+                  h3(style='text-align: center')
+                    b ANALYSIS
+                  .row
+                    div(classs='col-md-12')
+                      p Some description here description here description here.
+          .col-md-1
+    .row.card
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 SKILLS
+        .card(style='margin-top: -20px')
+          ul.nav.nav-tabs(role='tablist')
+            li.active(role='presentation', style='width: 50%')
+              a(href='#f', aria-controls='f', role='tab', data-toggle='tab', style='border-right: 1px solid #B4B4B4')
+                center Frontend
+            li(role='presentation', style='width: 50%')
+              a(href='#b', aria-controls='b', role='tab', data-toggle='tab')
+                center Backend
+        // Tab panes
+        .tab-content
+          #f.tab-pane.active(role='tabpanel')
+            .row(style='')
+              .col-md-1
+              .col-md-1(style='background-color: yellow;margin-top: 40px; ')
+                strong
+                  h2 JS
+              .col-md-9
+                .row(style='margin-top: 50px; ')
+                  .col-md-12
+                    .progress(style='height: 40px;')
+                      .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+              .col-md-1
+            .row(style='')
+              .col-md-1
+              .col-md-1(style='background-color: yellow;margin-top: 40px; ')
+                strong
+                  h2 JS
+              .col-md-9
+                .row(style='margin-top: 50px; ')
+                  .col-md-12
+                    .progress(style='height: 40px;')
+                      .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+              .col-md-1
+          #b.tab-pane(role='tabpanel')
+            .row
+              .col-md-1
+              .col-md-1(style='background-color: yellow;margin-top: 40px; ')
+                strong
+                  h2 JS
+              .col-md-9
+                .row(style='margin-top: 50px; ')
+                  .col-md-12
+                    .progress(style='height: 40px;')
+                      .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+              .col-md-1
+      .col-md-6.card
+        .page-header.card
+          span
+            br
+            h4 NOTES
+        .row
+          .col-md-1
+          .col-md-10
+            div(ng-controller='mainController')
+              form(ng-submit='post()')
+               h4 {{firstname}} says
+               textarea.form-control(required='', maxlength='200', rows='3', placeholder='Say something', ng-model='newPost.text')
+               input.btn.submit-btn.pull-right(type='submit', value='Chirp!')
+               #post-stream
+                h4 Chirp Feed
+                .user(ng-repeat="post in posts | orderBy:'created_at':true", ng-class-odd="'odd'", ng-class-even="'even'")
+                  p {{post.text}}
+                  small Posted by {{post.created_by}}
+                  small.pull-right {{post.created_at | date:"h:mma 'on' MMM d, y"}}
+    
+          .col-md-1
+    .row.card
+      .page-header.card
+        span
+          br
+          h4 OTHER MATCHES
+      .col-md-6.card
+        .page-header.card(style='background-color: black')
+          span
+            br
+            h4 OPTION(A)
+        .row.card
+          .col-md-1
+          .col-md-10
+            .row
+              .col-md-8.userprofile
+                .row
+                  .col-md-3
+                    img(src='./assets/images/img.jpg', style='margin-top: -10px', height='60%', width='60%', alt='')
+                  .col-md-9(style='border-right: 2px solid #FFDDDD')
+                    strong John Doe
+                    br
+                    | San Fransico, California
+              .col-md-1
+              .col-md-3(style='margin-top: -10px')
+                h4
+                  strong Frontend Engineer
+            br
+            br
+            div(clas='row')
+              div(clas='col-md-6')
+                .c100.p50.medium
+                  span 50%
+                  .slice
+                    .bar
+                    .fill
+                .row
+                  .col-md-12 Match with Position
+              .col-md-6(style='margin-top: -100px; margin-left: 220px; ')
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                .row
+                  .col-md-12 Amongst top 16%
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+            .row
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+          .col-md-1
+      .col-md-6.card
+        .page-header.card(style='background-color: black')
+          span
+            br
+            h4 OPTION(B)
+        .row.card
+          .col-md-1
+          .col-md-10
+            .row
+              .col-md-8.userprofile
+                .row
+                  .col-md-3
+                    img(src='./assets/images/img.jpg', style='margin-top: -10px', height='60%', width='60%', alt='')
+                  .col-md-9(style='border-right: 2px solid #FFDDDD')
+                    strong John Doe
+                    br
+                    | San Fransico, California
+              .col-md-1
+              .col-md-3(style='margin-top: -10px')
+                h4
+                  strong Frontend Engineer
+            br
+            br
+            div(clas='row')
+              div(clas='col-md-6')
+                .c100.p50.medium
+                  span 50%
+                  .slice
+                    .bar
+                    .fill
+                .row
+                  .col-md-12 Match with Position
+              .col-md-6(style='margin-top: -100px; margin-left: 220px; ')
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                .row
+                  .col-md-12 Amongst top 16%
+            .row(style='margin-top: 30px; border-top: 2px solid #FFDDDD')
+              br
+              br
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+            .row
+              .col-md-12
+                .progress(style='height: 40px;')
+                  .progress-bar(role='progressbar', style='width: 75%;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+          .col-md-1
+    .container
+    script(src='https://code.jquery.com/jquery-1.12.4.min.js', integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
